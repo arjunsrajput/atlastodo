@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <%- include('nav_bar') %>
+    <div class="container">
+        <h1>Update Task </h1>
+        <form class="TodoForm" action="/update/<%= result._id%>" method="POST">
+            <input class="input" value="<%= result.title%>" type="text" placeholder="Enter Title" name="title"> <br> <br>
+            <textarea class="input" name="description" ><%= result.description%></textarea> <br> <br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
